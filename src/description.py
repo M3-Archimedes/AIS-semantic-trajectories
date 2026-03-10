@@ -432,14 +432,14 @@ def describe_trajectory(vessel_id, vessel_type, gdf_trajectory, context, params)
         sel_ferry_routes = spatial_context.find_ferry_routes(context['ferry_routes'], origin_port, destination_port)
         for index, row in sel_ferry_routes.iterrows():
             distance, path = fastdtw(get_coordinates(list(itertools.chain(*trip_points))), get_coordinates(row['geometry']).tolist(), dist=euclidean)
-            sim_route = ' Trip course is similar to ' + row['name_int'] + ' with DTW distance ' + str(round(distance,2)) + '.'
+            sim_route = '"Route":"' + row['name_int'] + '", "DTW":' + str(round(distance,2)) #' Trip course is similar to ' + row['name_int'] + ' with DTW distance ' + str(round(distance,2)) + '.'
 
         # Store the extracted trip description
         if mode=='CSV' or mode =='MAP':
             trip_descriptions += trip_desc   # Append to existing descriptions of previous trips
         else: # JSON or TXT
             if mode!='JSON':   # Extra statistics only reported in TXT format
-                trip_desc += ' The total duration of the trip was '+ trip_duration + ' covering about ' + str(round(trip_length,2)) + ' nautical miles.' + sim_route
+                trip_desc += 'SUMMARY: ```json {"traveled_distance":' + str(round(trip_length,2)) + ', "total_duration_seconds":' + str(t_max - t_min) + ("," + sim_route if len(sim_route)>0 else "") + '}```' #' The total duration of the trip was '+ trip_duration + ' covering about ' + str(round(trip_length,2)) + ' nautical miles.' + sim_route
             trip_descriptions[new_trip_id] = trip_desc   # For descriptions in JSON or TXT 
 
     return trip_descriptions

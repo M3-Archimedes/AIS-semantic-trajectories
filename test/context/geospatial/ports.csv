@@ -1,0 +1,162 @@
+PORT_ID,COUNTRY,NAME,NAME_ALT,LON,LAT
+DETRV,DE,Travemünde,Travemunde,10.85736,53.95505
+DEHTU,DE,Holtenau,Holtenau,10.14996,54.3689
+DKLIN,DK,Lindø Havn,Lindo Havn,10.53333,55.46667
+DKBGZ,DK,Bogense,Bogense,10.08333,55.56667
+DKMRR,DK,Mariager,Mariager,9.98333,56.65
+DEPEF,DE,Peenemunde,Peenemunde,13.77059,54.13352
+DEWAR,DE,Warnemünde,Warnemunde,12.09505,54.15496
+DEPTD,DE,Petersdorf,Petersdorf,12.43857,54.22158
+DEMUK,DE,Mukran,Mukran,13.58333,54.48333
+DEDRA,DE,Dranske,Dranske,13.23099,54.62991
+DKMNS,DK,Masnedsund,Masnedsund,11.90203,55.00735
+SELIM,SE,Limhamn,Limhamn,12.92712,55.58686
+DKVAE,DK,Vallensbaek,Vallensbaek,12.37719,55.60859
+DKTUB,DK,Tuborg,Tuborg,12.58155,55.72591
+DKFDV,DK,Frederiksværk,Frederiksvark,12.01528,55.96361
+SEKVH,SE,Kopparverkshamnen,Kopparverkshamnen,12.71835,56.00588
+SEBAS,SE,Båstad,Bastad,12.83424,56.41865
+SEDON,SE,Donsö,Donso,11.79893,57.59464
+SESKM,SE,Skärhamn,Skarhamn,11.69076,57.96243
+SEGRD,SE,Grundsund,Grundsund,11.41758,58.21724
+DELBC,DE,Lübeck,Lubeck,10.67548,53.8689
+DEWIS,DE,Wismar,Wismar,11.45728,53.8985
+DENHO,DE,Neustadt/Holstein,Neustadt/Holstein,10.80353,54.09387
+DEANK,DE,Anklam,Anklam,13.69348,53.86011
+DEDMN,DE,Demmin,Demmin,13.03052,53.90668
+DEREN,DE,Rendsburg,Rendsburg,9.68329,54.30029
+DEKEL,DE,Kiel,Kiel,10.15393,54.3241
+DEHHF,DE,Heiligenhafen,Heiligenhafen,10.98907,54.37152
+DEBSK,DE,Burgstaaken/Fehmarn,Burgstaaken/Fehmarn,11.18909,54.42133
+DEORT,DE,Orth/Fehmarn,Orth/Fehmarn,11.04291,54.44708
+DEECK,DE,Eckernförde,Eckernforde,9.8623,54.47333
+DEPUT,DE,Puttgarden,Puttgarden,11.22992,54.50391
+DKROF,DK,Rødby (Færgehavn),Rodby (Faergehavn),11.35168,54.65271
+DKROD,DK,Rødby,Rodby,11.3457,54.65448
+DEKAP,DE,Kappeln,Kappeln,9.93909,54.66632
+DKBAG,DK,Bagenkop,,10.67432,54.75189
+DEFLF,DE,Flensburg,Flensburg,9.43811,54.8031
+DENEK,DE,"Glücksburg, Langballigau","Glucksburg, Langballigau",9.65308,54.82147
+DKNAK,DK,Nakskov,Nakskov,11.13751,54.82849
+DKMRS,DK,Marstal,Marstal,10.52252,54.85651
+DKTRS,DK,Tårs,Tars,11.0293,54.87567
+DKARK,DK,Ærøskøbing,AEroskobing,10.4079,54.89429
+DKSNO,DK,Strynø,Stryno,10.62689,54.90369
+DKSGD,DK,Sønderborg,Sonderborg,9.80389,54.89569
+DKMOM,DK,Mommark,Mommark,10.04468,54.9303
+DKSPB,DK,Spodsbjerg Havn,Spodsbjerg Havn,10.83313,54.93329
+DKRKB,DK,Rudkøbing,Rudkobing,10.70172,54.93469
+DKSOB,DK,Søby Havn,Soby Havn,10.25891,54.94269
+DKAUB,DK,Augustenborg,Augustenborg,9.87347,54.94373
+DKFYH,DK,Fynshav,Fynshav,9.98291,54.9939
+DKBLB,DK,Ballebro,Ballebro,9.66968,54.99933
+DKHDH,DK,Hardeshøj,Hardeshoj,9.69269,55.00873
+DKAVK,DK,Avernakø/Lyø,Avernako/Lyo,10.25653,55.0365
+DKENS,DK,Enstedværkets Havn,Enstedvaerkets Havn,9.42495,55.03495
+DKAAB,DK,Aabenraa,Aabenraa,9.42749,55.04169
+DKSVE,DK,Svendborg,Svendborg,10.6189,55.05768
+DKFAA,DK,Fåborg Havn,Faborg Havn,10.23529,55.09509
+DKBOS,DK,Bøjden,Bojden,10.09613,55.10913
+DKSDO,DK,Skarø/Drejø,Skaro/Drejo,10.47192,55.04187
+DKOMO,DK,Omø,Omo,11.15948,55.17169
+DKVSV,DK,Norjyllandsværkets Havn,Norjyllandsvaerkets Havn,10.78607,55.13971
+DKGFH,DK,Gulfhavnen,Gulfhavnen,11.25952,55.20129
+DKSTN,DK,Stigsnæs,Stigsnaes,11.2453,55.20911
+DKAGO,DK,Agersø,Agerso,11.19769,55.2121
+DKSTG,DK,Stigsnæsværkets Havn,Stigsnaesvaerkets Havn,11.24371,55.21307
+DKHAD,DK,Haderslev,Haderslev,9.50348,55.25067
+DKASN,DK,Assens,Assens,9.88391,55.2713
+DKARD,DK,Årøsund,Arosund,9.71307,55.26147
+DKARO,DK,Årø,Aro,9.73029,55.26147
+DKNBG,DK,Nyborg,Nyborg,10.79053,55.30627
+DKBGO,DK,Bågø,Bago,9.80011,55.3255
+DKKRR,DK,Korsør,Korsor,11.12909,55.3327
+DKODE,DK,Odense,Odense,10.38171,55.41089
+DKKOL,DK,Kolding,Kolding,9.50391,55.49072
+DKMID,DK,Middelfart,Middelfart,9.72668,55.50769
+DKSKB,DK,Skærbækværkets Havn,Skaerbaekvaerkets Havn,9.60828,55.5105
+DKLYO,DK,Lyngs Odde Havn,Lyngs Odde Havn,9.75873,55.51831
+DKFRC,DK,Fredericia (Og Shell-Havnen),Fredericia (Og Shell-Havnen),9.75289,55.55942
+DKASV,DK,Asnæsværkets Havn,Asnaesvaerkets Havn,11.08447,55.66553
+DKSTT,DK,Statoil-Havnen,Statoil-Havnen,11.09253,55.6665
+DKKAL,DK,Kalundborg,Kalundborg,11.09332,55.6767
+DKJUE,DK,Juelsminde Havn,Juelsminde Havn,10.01752,55.71631
+DKVEJ,DK,Vejle,Vejle,9.55731,55.70428
+DKEDL,DK,Endelave,Endelave,10.27228,55.76208
+DKKOK,DK,Kolby Kås Havn,Kolby Kas Havn,10.53009,55.79871
+DKHOR,DK,Horsens,Horsens,9.87488,55.85669
+DKSLV,DK,Sælvig Havn,Saelvig Havn,10.54828,55.86469
+DKSEO,DK,Sejerø,Sejero,11.13391,55.88068
+DKTNO,DK,Tunø,Tuno,10.45453,55.9505
+DKAAR,DK,Århus,Arhus,10.22221,56.14686
+DKEBT,DK,Ebeltoft,Ebeltoft,10.6701,56.19647
+DKSSV,DK,Studstrupværkets Havn,Studstrupvaerkets Havn,10.34808,56.24652
+DKGRE,DK,Grenå,Grena,10.92249,56.4129
+DKRAN,DK,Randers,Randers,10.0451,56.45868
+DKHBO,DK,Hobro,Hobro,9.80353,56.6405
+DKDAS,DK,Dansk Salts Havn,Dansk Salts Havn,10.03833,56.68311
+DKKON,DK,Cementfabrikken Kongsdal Havn,Cementfabrikken Kongsdal Havn,10.06567,56.68671
+DKDAN,DK,Cementfabrikken Danias Havn,Cementfabrikken Danias Havn,10.05029,56.69971
+DKEGN,DK,Egense,Egense,10.3067,56.98468
+DKHAS,DK,Hals,Hals,10.3089,56.98993
+DKAAL,DK,Aalborg,Aalborg,9.93707,57.04889
+DKHOH,DK,Hou Havn,Hou Havn,10.37708,57.05249
+DKNRS,DK,Nørresundby,Norresundby,9.93268,57.05408
+DKROR,DK,Aalborg Portland (Cementfabrikken Rordal),Aalborg Portland (Cementfabrikken Rordal),9.97192,57.06567
+DKFDH,DK,Frederikshavn,Frederikshavn,10.54547,57.43829
+DKHIR,DK,Hirtshals,Hirtshals,9.96228,57.59448
+DKSKA,DK,Skagen,Skagen,10.59528,57.7179
+DEWOL,DE,Wolgast,Wolgast,13.78473,54.05109
+DERSK,DE,Rostock,Rostock,12.1378,54.09306
+DEGRD,DE,"Greifswald, Landkreis","Greifswald, Landkreis",13.38373,54.09991
+DESTL,DE,Stralsund,Stralsund,13.10852,54.30792
+DELAU,DE,Lauterbach,Lauterbach,13.50452,54.3407
+DESAS,DE,Sassnitz,Sassnitz,13.64288,54.51331
+DKGED,DK,Gedser,Gedser,11.92688,54.57233
+DKNYF,DK,Nykøbing Falster,Nykobing Falster,11.86688,54.76111
+DKBDX,DK,Bandholm (Maribo),Bandholm (Maribo),11.48993,54.83649
+DKASK,DK,Askø,Asko,11.48328,54.8847
+DKSBK,DK,Stubbekøbing Havn,Stubbekobing Havn,12.04633,54.89172
+DKKRA,DK,Kragenæs,Kragenaes,11.35992,54.91431
+DKBOG,DK,Bogø,Bogo,12.05133,54.91248
+DKFEJ,DK,Fejø,Fejo,11.37329,54.93671
+DKORE,DK,"Orehoved, Falster","Orehoved, Falster",11.85211,54.96033
+DKFMO,DK,Femø,Femo,11.51947,54.96808
+DKVOR,DK,Vordingborg Havn,Vordingborg Havn,11.89392,54.99609
+DKUNX,DK,Masnedø Godningshavn (Uno-X Havn),Masnedo Godningshavn (Uno-X Havn),11.91809,55.00427
+DKMAS,DK,Masnedøværkets Havn,Masnedovaerkets Havn,11.88568,55.00128
+DKFAK,DK,Fakse Ladeplads Havn,Fakse Ladeplads Havn,12.16748,55.2121
+DKNVD,DK,Næstved,Naestved,11.75189,55.22711
+DKSSK,DK,Skælskør,Skaelskor,11.28949,55.2511
+SETRG,SE,Trelleborg,Trelleborg,13.1513,55.37011
+SEYST,SE,Ystad,Ystad,13.82568,55.42371
+DKKOG,DK,Køge,Koge,12.19849,55.45209
+DKDRA,DK,Dragør,Dragor,12.67792,55.59149
+DKAVE,DK,Avedøreværkets Havn,Avedorevaerkets Havn,12.48291,55.60107
+SEMMA,SE,Malmö,Malmo,12.9923,55.62023
+DKKTP,DK,Kastrup,Kastrup,12.65692,55.6377
+DKCPH,DK,Københavns Havn,Kobenhavns Havn,12.61539,55.69781
+DKHBK,DK,Holbæk,Holbaek,11.71729,55.7207
+DKORO,DK,Orø,Oro,11.80109,55.75653
+DKHVN,DK,Havnsø,Havnso,11.35992,55.76392
+DKKBY,DK,Kyndbyværkets Havn,Kyndbyvaerkets Havn,11.88507,55.81549
+DKFDS,DK,Frederikssund,Frederikssund,12.05109,55.8349
+SELAA,SE,Landskrona,Landskrona,12.82648,55.86389
+DKRRV,DK,Rørvig,Rorvig,11.76672,55.94427
+DKHUN,DK,Hundested,Hundested,11.8457,55.96173
+DKSVV,DK,Frederiskværk Havn (Frederiksværk Stålvalseværk),Frederiskvaerk Havn (Frederiksvaerk Stalvalsevaerk),12.00427,55.96069
+DKSJO,DK,Sjællands Odde,Sjaellands Odde,11.30048,55.97449
+DKHLS,DK,Helsingør (Elsinore),Helsingor (Elsinore),12.61609,56.0343
+SEHEL,SE,Helsingborg,Helsingborg,12.68882,56.04388
+SEHOG,SE,Höganäs,Hoganas,12.5481,56.19928
+SEHAD,SE,Halmstad,Halmstad,12.85168,56.65948
+DKANH,DK,Anholt,Anholt,11.51672,56.71667
+SEFAG,SE,Falkenberg,Falkenberg,12.47491,56.89008
+SEVAG,SE,Varberg,Varberg,12.2453,57.11267
+DKVES,DK,"Vesterø Havn, Læsø","Vestero Havn, Laeso",10.92072,57.29688
+SEGOT,SE,Göteborg,Goteborg,11.95189,57.7079
+SEWAL,SE,Wallhamn,Wallhamn,11.70129,58.01288
+SESTE,SE,Stenungsund (Ports),Stenungsund (Ports),11.80768,58.08051
+SELYS,SE,Lysekil,Lysekil,11.43433,58.2691
+SEBRO,SE,Brofjorden Preemraff,Brofjorden Preemraff,11.43373,58.3539
+SEKUN,SE,Kungshamn,Kungshamn,11.24591,58.36493
