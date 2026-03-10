@@ -15,7 +15,11 @@ If you are running this through a notebook, you might need to restart kernel to 
 
 ## Framework
 
-This open-source framework accepts as input raw vessel locations collected through the [Automatic Identification System (AIS)](https://www.imo.org/en/ourwork/safety/pages/ais.aspx) and constructs context-enriched trajectory representations. More specifically:
+This framework enables (i) construction of context-enriched semantic trajectories for vessels and (ii) generating textual descriptions of vessel trips in natual language.
+
+### (i) Constructing context-enriched semantic trajectories
+
+This open-source module accepts as input raw vessel locations collected through the [Automatic Identification System (AIS)](https://www.imo.org/en/ourwork/safety/pages/ais.aspx) and constructs context-enriched trajectory representations. More specifically:
 
 * _Mobility annotation_: It first annotates important points along the course of each vessel according to detected mobility events (e.g., stops, turns, slow motion). 
 
@@ -36,6 +40,14 @@ This open-source framework accepts as input raw vessel locations collected throu
     - _Bathymetry_: The NetCDF data that provides the seabed depth (in meters) at the grid cell of the stop event (if the vessel is anchored) or the minimum depth along the polyline of a moving episode (i.e., when the vessel is sailing or turning).
 
 * _Output representation_: The resulting semantic trajectory representation can be exported into several formats (CSV, JSON, plain TXT) for further processing, analytics, or visualization in maps and charts.
+
+### (ii) LLM-generated description in natural language
+
+To generate descriptions using LLMs, we employ a prompt consisting of a system message that establishes the task context and a user message that provides the semantic trajectory extracted in (i). This approach includes detailed instructions concerning interpretation of the various features (coordinates, timestamp, speed, distance, duration) per episode in the movement, as well as precise guidelines for measurement units (e.g., nautical miles for distance, Beaufort scale for wind force) and any available placemarks (islands, ports, capes, etc.) added from extra context to make sure that the model can interpret and use them properly. This prompt also includes a methodology that guides the LLM in synthesizing available information in order to provide its response in two parts:
+
+* A _textual description_ in natural language that outlines the trip and its most significant stages. 
+
+* A summary of _trip statistics_ in JSON format that include the traveled distance, the total duration, and the origin and destination ports (if available). 
 
 
 ## Publication 
