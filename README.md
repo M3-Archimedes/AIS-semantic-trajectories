@@ -23,17 +23,17 @@ This open-source framework accepts as input raw vessel locations collected throu
 
 * _Context enrichment_: It ingests extra context from various (geographical, maritime, meteorological) sources into each episode. Such context may include:
 
-        - _Ports_: Identifies the name of the port where the vessel is anchored during a stop episode.
+    - _Ports_: Identifies the name of the port where the vessel is anchored during a stop episode.
 
-        - _Placemarks_ (Coastal features): Finds whether the vessel is moving in close distance (e.g., less than 5 nautical miles) to capes, peninsulae, straits, etc.
+    - _Placemarks_ (Coastal features): Finds whether the vessel is moving in close distance (e.g., less than 5 nautical miles) to capes, peninsulae, straits, etc.
 
-        - _Protection zones_ (Offshore areas): Finds any polygonal regions (e.g., marine protection zones, national sea parks, fishing areas) the vessel is crossing along its course.
+    - _Protection zones_ (Offshore areas): Finds any polygonal regions (e.g., marine protection zones, national sea parks, fishing areas) the vessel is crossing along its course.
 
-        - _Traffic separation schemes_: Indicates whether the vessel is navigating across the designated lane for its direction in high-density areas according to traffic regulations.
+    - _Traffic separation schemes_: Indicates whether the vessel is navigating across the designated lane for its direction in high-density areas according to traffic regulations.
 
-        - _Meteorological_: If NetCDF data is available for this time period, the module identifies the wind conditions (wind force in the Beaufort scale, wind direction) along the polyline that represents the course of a vessel during this episode.
+    - _Meteorological_: If NetCDF data is available for this time period, the module identifies the wind conditions (wind force in the Beaufort scale, wind direction) along the polyline that represents the course of a vessel during this episode.
 
-        - _Bathymetry_: The NetCDF data that provides the seabed depth (in meters) at the grid cell of the stop event (if the vessel is anchored) or the minimum depth along the polyline of a moving episode (i.e., when the vessel is sailing or turning).
+    - _Bathymetry_: The NetCDF data that provides the seabed depth (in meters) at the grid cell of the stop event (if the vessel is anchored) or the minimum depth along the polyline of a moving episode (i.e., when the vessel is sailing or turning).
 
 * _Output representation_: The resulting semantic trajectory representation can be exported into several formats (CSV, JSON, plain TXT) for further processing, analytics, or visualization in maps and charts.
 
