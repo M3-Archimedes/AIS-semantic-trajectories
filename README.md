@@ -53,7 +53,7 @@ To generate descriptions using LLMs, we employ a prompt consisting of a system m
 ## Publication 
 
 Kostas Patroumpas, Alexandros Troupiotis-Kapeliaris, Giannis Spiliopoulos, Panagiotis Betchavas, Dimitrios Skoutas, Dimitris Zissis, Nikos Bikakis
-[**Context-Enriched Natural Language Descriptions of Vessel Trajectories**](https://arxiv.org/pdf/2602.11890), submitted for publication.
+[**Context-Enriched Natural Language Descriptions of Vessel Trajectories**](http://arxiv.org/abs/2603.12287), submitted for publication.
 
 <br>
 
