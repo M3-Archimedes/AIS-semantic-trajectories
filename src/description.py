@@ -248,12 +248,12 @@ def extract_semantic_trips(vessel_id, vessel_type, gdf_trajectory, context, para
         if stopped:
             stop_points.append(row['geometry'])
         if stopped and ('STOP_END' in row['annotation'] or 'GAP_END' in row['annotation']):
-            last = get_centroid(stop_points)
+            last = spatiotemporal.get_centroid(stop_points)
             # Identify the port where the vessel is anchored
-            port, d = find_nearest_port(context['ports'], last)
+            port, d = spatial_context.find_nearest_port(context['ports'], last)
             # Calculate bythometry features at this stop
             if 'bytho_netcdf' in context:
-                e = bythometry_polyline(context['bytho_netcdf'], LineString([[p.x, p.y] for p in stop_points]))
+                e = netcdf_context.calc_bythometry_polyline(context['bytho_netcdf'], LineString([[p.x, p.y] for p in stop_points]))
             else:
                 e = None
             event = ('STOPPED', t_stop_start, row[col_ts], [last, last], '', 0, 0, 0, None, '', e, ('in ' + port + ' port ' if port is not None else ''))
@@ -276,23 +276,23 @@ def extract_semantic_trips(vessel_id, vessel_type, gdf_trajectory, context, para
                 if len(move_points) > 0:
                     move_points.append(row)  # Include current point to avoid gaps in distance calculations
                     move_first, move_last = [move_points[0], move_points[-1]]
-                    s, d, t, h, b, w, e, placenames = calc_movement_features(move_points, context, params)
+                    s, d, t, h, b, w, e, placenames = spatial_context.calc_movement_features(move_points, context, params)
                     # Get extra placenames from protected areas or separation zones
-                    areas = find_crossing_areas([m['geometry'] for m in move_points], context)
-                    event = ('SAILING', move_first[col_ts], move_last[col_ts], [move_first['geometry'], move_last['geometry']], bearing2direction(h), h, d, s, b, w, e, ('off ' + ' and '.join(placenames) if len(placenames)>0 else '')+(' crossing ' + ' and '.join(areas) if len(areas)>0 else ''))
+                    areas = spatial_context.find_crossing_areas([m['geometry'] for m in move_points], context)
+                    event = ('SAILING', move_first[col_ts], move_last[col_ts], [move_first['geometry'], move_last['geometry']], spatiotemporal.bearing2direction(h), h, d, s, b, w, e, ('off ' + ' and '.join(placenames) if len(placenames)>0 else '')+(' crossing ' + ' and '.join(areas) if len(areas)>0 else ''))
                     trip_episodes.append(event)   
                 if len(turn_points) >= 2:   # LONG-lasting turn    
                     turn_first, turn_last = [turn_points[0], turn_points[-1]]
                     diff_heading = abs(round(turn_last['heading'] - turn_first['heading']))
-                    s, d, t, h, b, w, e, placenames = calc_movement_features(turn_points, context, params)
+                    s, d, t, h, b, w, e, placenames = spatial_context.calc_movement_features(turn_points, context, params)
                     # Get extra placenames from capes
-                    placenames += find_nearby_placemarks([t['geometry'] for t in turn_points], context['capes'], max_distance=0.1)
+                    placenames += spatial_context.find_nearby_placemarks([t['geometry'] for t in turn_points], context['capes'], max_distance=0.1)
                     # Get extra placenames from protected areas or separation zones
-                    areas = find_crossing_areas([t['geometry'] for t in turn_points], context)
+                    areas = spatial_context.find_crossing_areas([t['geometry'] for t in turn_points], context)
                     if (diff_heading >= MIN_TURN_ANGLE):  # Turns of less than MIN_TURN_ANGLE (in degrees) are considered as manueuvers                 
-                        event = ('TURNING', turn_first[col_ts], turn_last[col_ts], [t['geometry'] for t in turn_points], bearing2direction(turn_last['heading']), diff_heading, d, s, b, w, e, ('off ' + ' and '.join(placenames) if len(placenames)>0 else '')+(' crossing ' + ' and '.join(areas) if len(areas)>0 else ''))
+                        event = ('TURNING', turn_first[col_ts], turn_last[col_ts], [t['geometry'] for t in turn_points], spatiotemporal.bearing2direction(turn_last['heading']), diff_heading, d, s, b, w, e, ('off ' + ' and '.join(placenames) if len(placenames)>0 else '')+(' crossing ' + ' and '.join(areas) if len(areas)>0 else ''))
                     else:
-                        event = ('MANEUVERING', turn_first[col_ts], turn_last[col_ts], [t['geometry'] for t in turn_points], bearing2direction(turn_last['heading']), turn_last['heading'], d, s, b, w, e, ('off ' + ' and '.join(placenames) if len(placenames)>0 else '')+(' crossing ' + ' and '.join(areas) if len(areas)>0 else ''))
+                        event = ('MANEUVERING', turn_first[col_ts], turn_last[col_ts], [t['geometry'] for t in turn_points], spatiotemporal.bearing2direction(turn_last['heading']), turn_last['heading'], d, s, b, w, e, ('off ' + ' and '.join(placenames) if len(placenames)>0 else '')+(' crossing ' + ' and '.join(areas) if len(areas)>0 else ''))
                     trip_episodes.append(event) 
                     turning = False
                     turn_points = []
@@ -325,10 +325,10 @@ def extract_semantic_trips(vessel_id, vessel_type, gdf_trajectory, context, para
                 if len(move_points) > 0:
                     move_points.append(row)  # Include current point to avoid gaps in distance calculations
                     move_first, move_last = [move_points[0], move_points[-1]]
-                    s, d, t, h, b, w, e, placenames = calc_movement_features(move_points,context, params)
+                    s, d, t, h, b, w, e, placenames = spatial_context.calc_movement_features(move_points,context, params)
                     # Get extra placenames from protected areas or separation zones
-                    areas = find_crossing_areas([m['geometry'] for m in move_points], context)
-                    event = ('SAILING', move_first[col_ts], move_last[col_ts], [move_first['geometry'], move_last['geometry']], bearing2direction(h), h, d, s, b, w, e, ('off ' + ' and '.join(placenames) if len(placenames)>0 else '')+(' crossing ' + ' and '.join(areas) if len(areas)>0 else ''))
+                    areas = spatial_context.find_crossing_areas([m['geometry'] for m in move_points], context)
+                    event = ('SAILING', move_first[col_ts], move_last[col_ts], [move_first['geometry'], move_last['geometry']], spatiotemporal.bearing2direction(h), h, d, s, b, w, e, ('off ' + ' and '.join(placenames) if len(placenames)>0 else '')+(' crossing ' + ' and '.join(areas) if len(areas)>0 else ''))
                     trip_episodes.append(event) 
                 move_points = []
             last = row['geometry']
@@ -345,24 +345,24 @@ def extract_semantic_trips(vessel_id, vessel_type, gdf_trajectory, context, para
                     if len(move_points) > 0:
                         move_points.append(turn_points[0])  # Include the start of the turning manoeuvre to avoid gaps in distance calculations
                         move_first, move_last = [move_points[0], move_points[-1]]
-                        s, d, t, h, b, w, e, placenames = calc_movement_features(move_points, context, params)
+                        s, d, t, h, b, w, e, placenames = spatial_context.calc_movement_features(move_points, context, params)
                         # Get extra placenames from protected areas or separation zones
-                        areas = find_crossing_areas([m['geometry'] for m in move_points], context)
-                        event = ('SAILING', move_first[col_ts], move_last[col_ts], [move_first['geometry'], move_last['geometry']], bearing2direction(h), h, d, s, b, w, e, ('off ' + ' and '.join(placenames) if len(placenames)>0 else '')+(' crossing ' + ' and '.join(areas) if len(areas)>0 else ''))
+                        areas = spatial_context.find_crossing_areas([m['geometry'] for m in move_points], context)
+                        event = ('SAILING', move_first[col_ts], move_last[col_ts], [move_first['geometry'], move_last['geometry']], spatiotemporal.bearing2direction(h), h, d, s, b, w, e, ('off ' + ' and '.join(placenames) if len(placenames)>0 else '')+(' crossing ' + ' and '.join(areas) if len(areas)>0 else ''))
                         trip_episodes.append(event) 
                     move_points = [turn_points[-1]]    # Include the end of the turning manoeuvre to avoid gaps in subsequent distance calculations
                     if len(turn_points) >= 2:   # LONG-lasting turn    
                         turn_first, turn_last = [turn_points[0], turn_points[-1]]
                         diff_heading = abs(round(turn_last['heading'] - turn_first['heading']))
-                        s, d, t, h, b, w, e, placenames = calc_movement_features(turn_points, context, params)
+                        s, d, t, h, b, w, e, placenames = spatial_context.calc_movement_features(turn_points, context, params)
                         # Get extra placenames from capes
-                        placenames += find_nearby_placemarks([t['geometry'] for t in turn_points], context['capes'], max_distance=0.1)
+                        placenames += spatial_context.find_nearby_placemarks([t['geometry'] for t in turn_points], context['capes'], max_distance=0.1)
                         # Get extra placenames from protected areas or separation zones
-                        areas = find_crossing_areas([t['geometry'] for t in turn_points], context)
+                        areas = spatial_context.find_crossing_areas([t['geometry'] for t in turn_points], context)
                         if (diff_heading >= MIN_TURN_ANGLE):  # Turns of less than MIN_TURN_ANGLE (in degrees) are considered as manueuvers                 
-                            event = ('TURNING', turn_first[col_ts], turn_last[col_ts], [t['geometry'] for t in turn_points], bearing2direction(turn_last['heading']), diff_heading, d, s, b, w, e, ('off ' + ' and '.join(placenames) if len(placenames)>0 else '')+(' crossing ' + ' and '.join(areas) if len(areas)>0 else ''))
+                            event = ('TURNING', turn_first[col_ts], turn_last[col_ts], [t['geometry'] for t in turn_points], spatiotemporal.bearing2direction(turn_last['heading']), diff_heading, d, s, b, w, e, ('off ' + ' and '.join(placenames) if len(placenames)>0 else '')+(' crossing ' + ' and '.join(areas) if len(areas)>0 else ''))
                         else:
-                            event = ('MANEUVERING', turn_first[col_ts], turn_last[col_ts], [t['geometry'] for t in turn_points], bearing2direction(turn_last['heading']), turn_last['heading'], d, s, b, w, e, ('off ' + ' and '.join(placenames) if len(placenames)>0 else '')+(' crossing ' + ' and '.join(areas) if len(areas)>0 else ''))
+                            event = ('MANEUVERING', turn_first[col_ts], turn_last[col_ts], [t['geometry'] for t in turn_points], spatiotemporal.bearing2direction(turn_last['heading']), turn_last['heading'], d, s, b, w, e, ('off ' + ' and '.join(placenames) if len(placenames)>0 else '')+(' crossing ' + ' and '.join(areas) if len(areas)>0 else ''))
                         trip_episodes.append(event) 
                 turning = False
                 turn_points = []
