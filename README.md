@@ -71,7 +71,14 @@ To generate descriptions using LLMs, we employ a prompt consisting of a system m
 Kostas Patroumpas, Alexandros Troupiotis-Kapeliaris, Giannis Spiliopoulos, Panagiotis Betchavas, Dimitrios Skoutas, Dimitris Zissis, Nikos Bikakis
 [**Context-Enriched Natural Language Descriptions of Vessel Trajectories**](http://arxiv.org/abs/2603.12287), IEEE International Conference on Mobile Data Management (IEEE MDM 2026).
 
-
+```bibtex
+@inproceedings{PatroumpasLLMTraj26,
+  title  = {{Context-Enriched Natural Language Descriptions of Vessel Trajectories}},
+  author = {Patroumpas, Kostas and Troupiotis-Kapeliaris, Alexandros and Spiliopoulos, Giannis and Betchavas, Panagiotis and Skoutas, Dimitrios and Zissis, Dimitris and Bikakis, Nikos},
+  booktitle = {{IEEE International Conference on Mobile Data Management (MDM)}},
+  year   = {2026}
+}
+```
 
 <br>
 
