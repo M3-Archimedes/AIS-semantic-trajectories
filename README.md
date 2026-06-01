@@ -50,10 +50,18 @@ To generate descriptions using LLMs, we employ a prompt consisting of a system m
 * A summary of _trip statistics_ in JSON format that include the traveled distance, the total duration, and the origin and destination ports (if available). 
 
 
+<br>
+
+## Project 
+[**M3: Multimodal Foundation Models for the Maritime Domain Project**](https://github.com/M3-Archimedes)
+
+
 ## Publication 
 
 Kostas Patroumpas, Alexandros Troupiotis-Kapeliaris, Giannis Spiliopoulos, Panagiotis Betchavas, Dimitrios Skoutas, Dimitris Zissis, Nikos Bikakis
-[**Context-Enriched Natural Language Descriptions of Vessel Trajectories**](http://arxiv.org/abs/2603.12287), submitted for publication.
+[**Context-Enriched Natural Language Descriptions of Vessel Trajectories**](http://arxiv.org/abs/2603.12287), IEEE International Conference on Mobile Data Management (IEEE MDM 2026).
+
+
 
 <br>
 
