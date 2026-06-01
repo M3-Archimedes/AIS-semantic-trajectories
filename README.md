@@ -57,8 +57,6 @@ To generate descriptions using LLMs, we employ a prompt consisting of a system m
 
 * [**HABIT: Aggregation-based Imputation Framework for Vessel Trajectories**](https://github.com/M3-Archimedes/HABIT)
 
-* [**Context-Enriched Natural Language Descriptions of Vessel Trajectories**](https://github.com/M3-Archimedes/AIS-semantic-trajectories)
-
 * [**IMGIN: Image-based Imputation of Trajectories**](https://github.com/M3-Archimedes/IMaGe-based-ImputatioN-of-Trajectories)
 
 * [**AIS Vessel Trajectory Annotation**](https://github.com/M3-Archimedes/AIS-trajectory-annotation)
